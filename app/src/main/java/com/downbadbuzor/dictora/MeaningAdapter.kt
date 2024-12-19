@@ -9,7 +9,6 @@ import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.downbadbuzor.dictora.databinding.MeaningRecyclerRowBinding
 
@@ -33,6 +32,8 @@ class MeaningAdapter(val context: Context) :RecyclerView.Adapter<MeaningAdapter.
             }
 
 
+
+
             if (meaning.synonyms.isNotEmpty()) {
                 binding.synonymsTitle.visibility = View.VISIBLE
                 binding.synonyms.visibility = View.VISIBLE
@@ -40,7 +41,7 @@ class MeaningAdapter(val context: Context) :RecyclerView.Adapter<MeaningAdapter.
                 val synonymsText = meaning.synonyms.joinToString(", ")
                 val spannableString = SpannableString(synonymsText)
 
-                meaning.synonyms.forEachIndexed { index, synonym ->
+                meaning.synonyms.forEachIndexed { _, synonym ->
                     val startIndex = synonymsText.indexOf(synonym, ignoreCase = true)
                     val endIndex = startIndex + synonym.length
 
@@ -71,7 +72,7 @@ class MeaningAdapter(val context: Context) :RecyclerView.Adapter<MeaningAdapter.
                 val antonymsText = meaning.antonyms.joinToString(", ")
                 val spannableString = SpannableString(antonymsText)
 
-                meaning.antonyms.forEachIndexed { index, antonym ->
+                meaning.antonyms.forEachIndexed { _, antonym ->
                     val startIndex = antonymsText.indexOf(antonym, ignoreCase = true)
                     val endIndex = startIndex + antonym.length
 

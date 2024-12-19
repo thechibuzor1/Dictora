@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        binding.main.setOnClickListener {
+            binding.searchInput.clearFocus()
+        }
 
         binding.searchInput.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {

@@ -31,6 +31,7 @@
         />
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/definitions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +50,7 @@
         />
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/synonyms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,6 +69,7 @@
         />
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/antonyms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -43,9 +43,20 @@ class SearchResults : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
+        binding.content.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+            val scrollThreshold = 250
+            if (scrollY > scrollThreshold && supportActionBar?.title == "Search") {
+                supportActionBar?.title = word
+            } else if (scrollY < scrollThreshold && supportActionBar?.title != "Search") {
+                supportActionBar?.title = "Search"
+            }
+
+        }
+
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
