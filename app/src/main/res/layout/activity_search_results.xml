@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchResults">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progress_bar"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:indeterminateTint="?attr/colorPrimary"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:visibility="gone"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            >
+            <TextView
+                android:layout_marginTop="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Word"
+                android:textSize="32sp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:id="@+id/word"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/t e s t/"
+                android:textColor="?attr/colorPrimary"
+                android:id="@+id/phonetic"
+                android:fontFamily="@font/aclonica"
+            />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycler_view"
+                android:nestedScrollingEnabled="false"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/no_results"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/no_res"
+            android:id="@+id/no_results_image"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No results found"
+            android:textSize="20sp"
+            android:fontFamily="@font/aclonica"
+            />
+        <TextView
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="You're probably looking for something else or not connected to the internet."
+            android:fontFamily="@font/droid_sans"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

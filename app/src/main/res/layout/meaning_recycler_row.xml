@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/search_res_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="noun"
+        android:textStyle="bold"
+        android:fontFamily="@font/aclonica"
+        android:textSize="20sp"
+        android:textColor="?attr/colorSecondary"
+        android:id="@+id/part_of_speech"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/colorTertiary"
+        android:text="Definitions"
+        android:textSize="16sp"
+        android:fontFamily="@font/aclonica"
+        />
+
+    <TextView
+        android:id="@+id/definitions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid_sans"
+        tools:text="1 definition \n 2 definition \n\n 3rd definition." />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/colorTertiary"
+        android:text="Synonyms"
+        android:id="@+id/synonyms_title"
+        android:textSize="16sp"
+        android:fontFamily="@font/aclonica"
+        />
+
+    <TextView
+        android:id="@+id/synonyms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid_sans"
+        tools:text="asad, asadu, adhd" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/colorTertiary"
+        android:text="Antonyms"
+        android:id="@+id/antonyms_title"
+        android:textSize="16sp"
+        android:fontFamily="@font/aclonica"
+        />
+
+    <TextView
+        android:id="@+id/antonyms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid_sans"
+        tools:text="asad, asadu, adhd" />
+
+</LinearLayout>
