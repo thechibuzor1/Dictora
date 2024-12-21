@@ -28,7 +28,7 @@ class MeaningAdapter(val context: Context) :RecyclerView.Adapter<MeaningAdapter.
             binding.partOfSpeech.text = meaning.partOfSpeech
             binding.definitions.text = meaning.definitions.joinToString("\n\n") {
                 val index = meaning.definitions.indexOf(it) + 1
-                 index.toString()+" . "+ it.definition
+                 index.toString()+". "+ it.definition
             }
 
 

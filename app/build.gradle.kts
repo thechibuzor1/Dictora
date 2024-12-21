@@ -52,4 +52,6 @@ dependencies {
 
     implementation ("com.squareup.retrofit2:retrofit:2.11.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("com.airbnb.android:lottie:6.1.0")
 }
